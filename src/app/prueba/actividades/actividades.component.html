@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Actividades</title>
+    <link rel="stylesheet" href="actividades.component.css">
+</head>
+<body>
+    <h1>Actividades Pendientes</h1>
+    <button (click)="irAlFormulario()" >Ir al formulario</button>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr >
+                    <th>ID</th>
+                    <th>Nombre Actividad</th>
+                    <th>Descripción</th>
+                    <th>Completar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let actividad of tarea">
+                    <td>{{ actividad.id }}</td>
+                    <td>{{ actividad.nombre }}</td>
+                    <td>{{ actividad.descripcion }}</td>
+                    <td><button class="btn-completar" (click)="actividad?.id !== undefined && completarTarea(actividad.id, actividad)">Completar</button></td>
+                    <td><button class="btn-eliminar" (click)="actividad?.id !== undefined && deleteTarea(actividad.id)">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

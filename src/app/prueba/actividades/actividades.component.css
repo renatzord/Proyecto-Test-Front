@@ -1,0 +1,37 @@
+.table-responsive {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.btn-completar {
+    background-color: green;
+    color: white;
+}
+.btn-eliminar {
+    background-color: red;
+    color: white;
+}
+
+h1 {
+    font-size: 1.5rem; 
+    text-align: center; 
+    margin: 1rem 0; 
+}
+
+button {
+    font-size: 1rem; 
+    padding: 0.5rem 1rem;
+    display: block; 
+    margin: 1rem auto; 
+}
+

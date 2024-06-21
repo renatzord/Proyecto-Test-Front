@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar tarea</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar tarea</h2>
+        <form (ngSubmit)="guardarTarea()" >
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" [(ngModel)]="tarea.nombre" placeholder="Ingrese el nombre">
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" [(ngModel)]="tarea.descripcion" placeholder="Ingrese la descripción"></textarea>
+            <button type="submit">Guardar tarea</button>
+        </form>
+    </div>
+</body>
+</html>
